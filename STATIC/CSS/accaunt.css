@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 300;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    cursor: default;
+  }
+  
+  /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+  ul[class],
+  ol[class] {
+    list-style: none;
+  }
+  
+  /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+    color: black;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  article > * + * {
+    margin-top: 1em;
+  }
+input,
+button,
+textarea,
+
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+    height: auto;
+}
+
+main{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.main_title{
+    font-size: 30px;
+}
+.main_block{
+    width: 70%;
+    min-height: 200px;
+    background-color: orange;
+    border: 2px solid black;
+    box-shadow: 10px 10px 0px rgb(174, 0, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+.s{
+    border-right: 1px solid black;
+}
+.t{
+    border-top: 1px solid black;
+}
+.col{
+    width: 150px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+.col_title{
+    text-align: center;
+    font-size: 15px;
+}
+.row{
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_col{
+    text-align: center;
+    width: 180px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_col:hover{
+    cursor: pointer;
+    color: orange;
+}
+.r{
+    color: red;
+}
+.g{
+    color: green;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: green;
+    background: url("../IMAGES/bbfcd039f535420bb4faf4668e8c47ae.jpg");
+    background-size: cover;
+}
+.name{
+    margin-left: 50px;
+    margin-top: 14px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
